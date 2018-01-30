@@ -1,4 +1,7 @@
 ---
-Name: zapp
+Name: app
 After: "*"
 ---
+SilverStripe\Security\Member:
+  extensions:
+    - TeamTrack\Extensions\MemberExtension
