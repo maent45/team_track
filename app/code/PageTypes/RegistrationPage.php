@@ -7,6 +7,7 @@ use SilverStripe\Forms\Form;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Forms\TextField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Security\Group;
 use SilverStripe\Security\Member;
 
@@ -42,9 +43,20 @@ class RegistrationPage_Controller extends PageController {
   public function submit($data, $form) {
 
     $member = new Member();
+    $profilePage = ProfilePage::create();
     $group = Group::get()->filter(['Code' => MemberExtension::DEVELOPER_GROUP])->first();
 
     $form->saveInto($member);
+    // $member->ProfileImage($data['ProfileImage']);
+
+    $member->write();
+
+    $profilePage->MemberID = $member->ID;
+    $profilePage->URLSegment = 'profile/' . $member->ID;
+    $profilePage->Title = 'profile/' . $member->ID;
+    $profilePage->write();
+
+    $member->ProfilePageID = $profilePage->ID;
     $member->write();
 
     if (!$group) {
