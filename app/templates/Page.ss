@@ -1,31 +1,12 @@
 <!DOCTYPE html>
-<!--
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Simple. by Sara (saratusar.com, @saratusar) for Innovatif - an awesome Slovenia-based digital agency (innovatif.com/en)
-Change it, enhance it and most importantly enjoy it!
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
--->
-
-<!--[if !IE]><!-->
-<html lang="$ContentLocale">
-<!--<![endif]-->
-<!--[if IE 6 ]><html lang="$ContentLocale" class="ie ie6"><![endif]-->
-<!--[if IE 7 ]><html lang="$ContentLocale" class="ie ie7"><![endif]-->
-<!--[if IE 8 ]><html lang="$ContentLocale" class="ie ie8"><![endif]-->
-<head>
+<html lang="$ContentLocale"><head>
 	<% base_tag %>
 	<title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	$MetaTags(false)
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<% require themedCSS('reset') %>
-	<% require themedCSS('typography') %>
-	<% require themedCSS('form') %>
-	<% require themedCSS('layout') %>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link rel="shortcut icon" href="themes/simple/images/favicon.ico" />
 </head>
 <body class="$ClassName.ShortName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
@@ -38,7 +19,7 @@ Change it, enhance it and most importantly enjoy it!
 <% include Footer %>
 
 <% require javascript('//code.jquery.com/jquery-1.7.2.min.js') %>
-<% require themedJavascript('script') %>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 </body>
 </html>

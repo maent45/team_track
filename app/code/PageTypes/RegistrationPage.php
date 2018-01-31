@@ -10,15 +10,23 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Security\Group;
 use SilverStripe\Security\Member;
+use SilverStripe\Control\HTTPRequest;
+
+use TeamTrack\Profile;
 
 class RegistrationPage extends Page {
+
+  private static $has_many = [
+    'Profiles' => Profile::class
+  ];
 
 }
 
 class RegistrationPage_Controller extends PageController {
 
   private static $allowed_actions = [
-    'Form'
+    'Form',
+    'show'
   ];
 
   public function Form() {
@@ -43,20 +51,16 @@ class RegistrationPage_Controller extends PageController {
   public function submit($data, $form) {
 
     $member = new Member();
-    $profilePage = ProfilePage::create();
+    $profile = new Profile();
     $group = Group::get()->filter(['Code' => MemberExtension::DEVELOPER_GROUP])->first();
 
     $form->saveInto($member);
-    // $member->ProfileImage($data['ProfileImage']);
-
     $member->write();
 
-    $profilePage->MemberID = $member->ID;
-    $profilePage->URLSegment = 'profile/' . $member->ID;
-    $profilePage->Title = 'profile/' . $member->ID;
-    $profilePage->write();
+    $profile->MemberID = $member->ID;
+    $profile->write();
 
-    $member->ProfilePageID = $profilePage->ID;
+    $member->ProfileID = $profile->ID;
     $member->write();
 
     if (!$group) {
@@ -72,6 +76,18 @@ class RegistrationPage_Controller extends PageController {
 
     $form->sessionMessage('Account registered! ' . $data['FirstName'], 'success');
     return $this->redirectBack();
+  }
+
+  public function show(SS_HTTPRequest $request) {
+    $region = Profile::get()->byID($request->param('ID'));
+
+    if(!$region) {
+      return $this->httpError(404,'That region could not be found');
+    }
+
+    return array (
+      'Profile' => $region
+    );
   }
 
 }

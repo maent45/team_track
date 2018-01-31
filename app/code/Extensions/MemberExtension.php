@@ -7,7 +7,8 @@ use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Assets\File;
 
-// use TeamDash\Skill;
+use TeamTrack\Profile;
+use TeamTrack\Notification;
 
 class MemberExtension extends DataExtension {
 
@@ -21,12 +22,13 @@ class MemberExtension extends DataExtension {
 
   private static $has_one = [
     'ProfileImage' => File::class,
-    'ProfilePage' => ProfilePage::class
+    'ProfilePage' => ProfilePage::class,
+    'Profile' => Profile::class
   ];
 
-  // private static $many_many = [
-  //   'Skills' => Skill::class
-  // ];
+  private static $has_many = [
+    'Notifications' => Notification::class
+  ];
 
   public function canView($member = null, $context = []) {
     return true;

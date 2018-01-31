@@ -4,7 +4,7 @@
       <% loop $getMembers %>
           <li>$Email</li>
           <% loop $ProfilePage %>
-            <h1>$ID $URLSegment</h1>
+            <a href="$URLSegment">Profile</a>
           <% end_loop %>
       <% end_loop %>
     </ul>
