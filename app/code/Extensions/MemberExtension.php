@@ -22,7 +22,7 @@ class MemberExtension extends DataExtension {
 
   private static $has_one = [
     'ProfileImage' => File::class,
-    'ProfilePage' => ProfilePage::class,
+    // 'ProfilePage' => ProfilePage::class,
     'Profile' => Profile::class
   ];
 

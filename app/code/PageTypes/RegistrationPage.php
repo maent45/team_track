@@ -35,14 +35,16 @@ class RegistrationPage_Controller extends PageController {
       TextField::create('FirstName'),
       TextField::create('Surname', 'Last Name'),
       TextField::create('Email'),
-      TextField::create('Role')
+      TextField::create('Role'),
+      TextField::create('Password'),
+      TextField::create('ConfirmPassword')
     );
 
     $actions = new FieldList(
       FormAction::create('submit')
     );
 
-    $required = new RequiredFields('FirstName', 'SurName', 'Email', 'Role');
+    $required = new RequiredFields('FirstName', 'SurName', 'Email', 'Role', 'Password', 'ConfirmPassword');
 
     $form = new Form($this, 'Form', $fields, $actions, $required);
 
