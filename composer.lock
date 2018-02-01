@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a4bf5f7fd0b6814baec052e1c70fc6f",
+    "content-hash": "979c36a84b61b9e58e56bab431c4cbf4",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -977,64 +977,17 @@
             "time": "2017-01-02T13:31:39+00:00"
         },
         {
-            "name": "silverstripe-themes/simple",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe-themes/silverstripe-simple.git",
-                "reference": "c2fdd14e9a78d68ce7cb50c6100d571f8c78174e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-themes/silverstripe-simple/zipball/c2fdd14e9a78d68ce7cb50c6100d571f8c78174e",
-                "reference": "c2fdd14e9a78d68ce7cb50c6100d571f8c78174e",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "*",
-                "silverstripe/framework": ">=3.5"
-            },
-            "type": "silverstripe-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2.x-dev"
-                },
-                "expose": [
-                    "css",
-                    "images",
-                    "javascript",
-                    "webfonts"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sara Tušar (Innovaif)",
-                    "homepage": "http://www.saratusar.com"
-                }
-            ],
-            "description": "The SilverStripe simple theme (default SilverStripe 3 theme)",
-            "keywords": [
-                "silverstripe",
-                "theme"
-            ],
-            "time": "2018-01-12 01:59:25"
-        },
-        {
             "name": "silverstripe/admin",
             "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-admin.git",
-                "reference": "16506e84774de72051607d0efd3025e5723eebf4"
+                "reference": "eb070f1f93b80c8ddaca0ab000496e31d7a81afa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-admin/zipball/16506e84774de72051607d0efd3025e5723eebf4",
-                "reference": "16506e84774de72051607d0efd3025e5723eebf4",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-admin/zipball/eb070f1f93b80c8ddaca0ab000496e31d7a81afa",
+                "reference": "eb070f1f93b80c8ddaca0ab000496e31d7a81afa",
                 "shasum": ""
             },
             "require": {
@@ -1079,7 +1032,7 @@
                 "admin",
                 "silverstripe"
             ],
-            "time": "2018-01-24 21:33:25"
+            "time": "2018-01-30T20:33:33+00:00"
         },
         {
             "name": "silverstripe/asset-admin",
@@ -1087,12 +1040,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-asset-admin.git",
-                "reference": "df717562afc4d01ecac251d4d7b2e391c9e3e4cc"
+                "reference": "d7132812986fa1ca27247aae74b7388b8ca3740a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/df717562afc4d01ecac251d4d7b2e391c9e3e4cc",
-                "reference": "df717562afc4d01ecac251d4d7b2e391c9e3e4cc",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-asset-admin/zipball/d7132812986fa1ca27247aae74b7388b8ca3740a",
+                "reference": "d7132812986fa1ca27247aae74b7388b8ca3740a",
                 "shasum": ""
             },
             "require": {
@@ -1128,7 +1081,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Asset management for the SilverStripe CMS",
-            "time": "2018-01-29 22:03:46"
+            "time": "2018-01-30T20:34:06+00:00"
         },
         {
             "name": "silverstripe/assets",
@@ -1184,7 +1137,7 @@
                 "assets",
                 "silverstripe"
             ],
-            "time": "2018-01-23 02:38:35"
+            "time": "2018-01-23T02:38:35+00:00"
         },
         {
             "name": "silverstripe/campaign-admin",
@@ -1250,7 +1203,7 @@
                 "silverstripe",
                 "versioned"
             ],
-            "time": "2018-01-25 00:20:50"
+            "time": "2018-01-25T00:20:50+00:00"
         },
         {
             "name": "silverstripe/cms",
@@ -1316,7 +1269,7 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2018-01-24 23:15:35"
+            "time": "2018-01-24T23:15:35+00:00"
         },
         {
             "name": "silverstripe/config",
@@ -1355,7 +1308,7 @@
                 "BSD-3-Clause"
             ],
             "description": "SilverStripe configuration based on YAML and class statics",
-            "time": "2017-11-21 03:12:26"
+            "time": "2017-11-21T03:12:26+00:00"
         },
         {
             "name": "silverstripe/errorpage",
@@ -1406,7 +1359,7 @@
                 "errorpage",
                 "silverstripe"
             ],
-            "time": "2018-01-26 15:09:03"
+            "time": "2018-01-26T15:09:03+00:00"
         },
         {
             "name": "silverstripe/framework",
@@ -1414,12 +1367,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "8a6686bc0f1c1e65a032a33c4d75e56e4be914f0"
+                "reference": "11f4693648c5232477ee632324cc67df250ec44c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/8a6686bc0f1c1e65a032a33c4d75e56e4be914f0",
-                "reference": "8a6686bc0f1c1e65a032a33c4d75e56e4be914f0",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/11f4693648c5232477ee632324cc67df250ec44c",
+                "reference": "11f4693648c5232477ee632324cc67df250ec44c",
                 "shasum": ""
             },
             "require": {
@@ -1523,7 +1476,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2018-01-30 03:24:34"
+            "time": "2018-01-31T03:48:17+00:00"
         },
         {
             "name": "silverstripe/graphql",
@@ -1558,7 +1511,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "GraphQL server for SilverStripe models and other data",
-            "time": "2018-01-23 21:39:01"
+            "time": "2018-01-23T21:39:01+00:00"
         },
         {
             "name": "silverstripe/recipe-cms",
@@ -1602,7 +1555,7 @@
             ],
             "description": "SilverStripe recipe for fully featured page and asset content editing",
             "homepage": "http://silverstripe.org",
-            "time": "2018-01-23 02:42:51"
+            "time": "2018-01-23T02:42:51+00:00"
         },
         {
             "name": "silverstripe/recipe-core",
@@ -1644,7 +1597,7 @@
             ],
             "description": "SilverStripe framework-only core recipe",
             "homepage": "http://silverstripe.org",
-            "time": "2018-01-23 02:42:31"
+            "time": "2018-01-23T02:42:31+00:00"
         },
         {
             "name": "silverstripe/recipe-plugin",
@@ -1749,7 +1702,7 @@
                 "reports",
                 "silverstripe"
             ],
-            "time": "2018-01-25 13:19:39"
+            "time": "2018-01-25T13:19:39+00:00"
         },
         {
             "name": "silverstripe/siteconfig",
@@ -1798,7 +1751,7 @@
                 "silverstripe",
                 "siteconfig"
             ],
-            "time": "2018-01-24 23:15:35"
+            "time": "2018-01-24T23:15:35+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",
@@ -1897,7 +1850,7 @@
                 "silverstripe",
                 "versioned"
             ],
-            "time": "2018-01-12 04:07:40"
+            "time": "2018-01-12T04:07:40+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2185,16 +2138,16 @@
         },
         {
             "name": "symfony/polyfill-apcu",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-apcu.git",
-                "reference": "04f62674339602def515bff4bc6901fc1d4951e8"
+                "reference": "e8ae2136ddb53dea314df56fcd88e318ab936c00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/04f62674339602def515bff4bc6901fc1d4951e8",
-                "reference": "04f62674339602def515bff4bc6901fc1d4951e8",
+                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/e8ae2136ddb53dea314df56fcd88e318ab936c00",
+                "reference": "e8ae2136ddb53dea314df56fcd88e318ab936c00",
                 "shasum": ""
             },
             "require": {
@@ -2203,7 +2156,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
@@ -2237,20 +2190,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-10-11T12:05:26+00:00"
+            "time": "2018-01-30T19:27:44+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
+                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
-                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
                 "shasum": ""
             },
             "require": {
@@ -2262,7 +2215,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
@@ -2296,7 +2249,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-10-11T12:05:26+00:00"
+            "time": "2018-01-30T19:27:44+00:00"
         },
         {
             "name": "symfony/translation",
