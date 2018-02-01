@@ -10,7 +10,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Security\Group;
 use SilverStripe\Security\Member;
-use SilverStripe\Control\HTTPRequest;
+// use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Control\Director;
 
 use TeamTrack\Profile;
@@ -78,18 +78,6 @@ class RegistrationPage_Controller extends PageController {
 
     $form->sessionMessage('Account registered! ' . $data['FirstName'], 'success');
     return $this->redirectBack();
-  }
-
-  public function profile(HTTPRequest $request) {
-    $profile = Profile::get()->byID($request->param('ID'));
-
-    if (!$profile) {
-      return $this->httpError(404,'That profile could not be found');
-    }
-    
-    return array (
-      'Profile' => $profile
-    );
   }
 
 }

@@ -12,33 +12,35 @@ use SilverStripe\Security\Group;
 use SilverStripe\Security\Member;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Control\HTTPRequest;
+
+use TeamTrack\Profile;
 
 class DashboardPage extends Page {
 
-  public function getMembers() {
-    $members = Member::get();
-
-    $membersForDisplay = new ArrayList();
-
-    foreach ($members as $member) {
-
-      $profilePage = ProfilePage::get()->filter(array(
-        'MemberID' => $member->ID
-      ));
-
-      $results = array(
-          'Email' => $member->Email,
-          'ProfilePage' => $profilePage
-      );
-
-      $membersForDisplay->push($results);
-    }
-
-    return $membersForDisplay;
+  public function Profiles() {
+    $profiles = Profile::get();
+    return $profiles;
   }
 
 }
 
 class DashboardPage_Controller extends PageController {
+  
+  private static $allowed_actions = [
+    'profile'
+  ];
+  
+  public function profile(HTTPRequest $request) {
+    $profile = Profile::get()->byID($request->param('ID'));
 
+    if (!$profile) {
+      return $this->httpError(404,'That profile could not be found');
+    }
+    
+    return array (
+      'Profile' => $profile
+    );
+  }
+  
 }

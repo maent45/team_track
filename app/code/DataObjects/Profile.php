@@ -15,7 +15,14 @@ class Profile extends DataObject {
   ];
 
   public function Link() {
-    return $this->RegistrationPage()->Link('profile/'.$this->ID);
+    $dashboardPage = DataObject::get_one('DashboardPage');
+    return $dashboardPage->Link('profile/'.$this->ID);
   }
+  
+  private static $summary_fields = [
+    'Member.Email' => 'Email',
+    'Member.FirstName' => 'First name',
+    'Member.Surname' => 'Last name'
+  ];
 
 }
