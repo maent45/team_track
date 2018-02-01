@@ -27,7 +27,7 @@ class RegistrationPage_Controller extends PageController {
 
   private static $allowed_actions = [
     'Form',
-    'show'
+    'profile'
   ];
 
   public function Form() {
@@ -80,13 +80,13 @@ class RegistrationPage_Controller extends PageController {
     return $this->redirectBack();
   }
 
-  public function show(HTTPRequest $request) {
+  public function profile(HTTPRequest $request) {
     $profile = Profile::get()->byID($request->param('ID'));
 
-    if(!$profile) {
-      return $this->httpError(404,'That region could not be found');
+    if (!$profile) {
+      return $this->httpError(404,'That profile could not be found');
     }
-
+    
     return array (
       'Profile' => $profile
     );

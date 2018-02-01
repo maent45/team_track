@@ -15,7 +15,7 @@ class Profile extends DataObject {
   ];
 
   public function Link() {
-    return $this->RegistrationPage()->Link('show/'.$this->ID);
+    return $this->RegistrationPage()->Link('profile/'.$this->ID);
   }
 
 }
