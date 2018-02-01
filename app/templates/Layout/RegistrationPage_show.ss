@@ -1,3 +1,3 @@
-<% loop $Profile %>
+<% with $Profile %>
   $ID
-<% end_loop %>
+<% end_with %>

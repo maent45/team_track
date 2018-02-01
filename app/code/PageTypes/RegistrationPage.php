@@ -11,6 +11,7 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Security\Group;
 use SilverStripe\Security\Member;
 use SilverStripe\Control\HTTPRequest;
+use SilverStripe\Control\Director;
 
 use TeamTrack\Profile;
 
@@ -56,7 +57,8 @@ class RegistrationPage_Controller extends PageController {
 
     $form->saveInto($member);
     $member->write();
-
+    
+    $profile->RegistrationPageID = Director::get_current_page()->ID;
     $profile->MemberID = $member->ID;
     $profile->write();
 
@@ -78,15 +80,15 @@ class RegistrationPage_Controller extends PageController {
     return $this->redirectBack();
   }
 
-  public function show(SS_HTTPRequest $request) {
-    $region = Profile::get()->byID($request->param('ID'));
+  public function show(HTTPRequest $request) {
+    $profile = Profile::get()->byID($request->param('ID'));
 
-    if(!$region) {
+    if(!$profile) {
       return $this->httpError(404,'That region could not be found');
     }
 
     return array (
-      'Profile' => $region
+      'Profile' => $profile
     );
   }
 

@@ -10,7 +10,7 @@ class Profile extends DataObject {
   private static $table_name = 'TeamTrack_Profile';
 
   private static $has_one = [
-    'RegistrationPage' => RegistrationPage::class,
+    'RegistrationPage' => 'RegistrationPage',
     'Member' => Member::class
   ];
 
