@@ -4,6 +4,7 @@ namespace TeamTrack;
 
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\Member;
+use SilverStripe\ORM\Search\SearchContext;
 
 class Profile extends DataObject {
 
@@ -24,5 +25,26 @@ class Profile extends DataObject {
     'Member.FirstName' => 'First name',
     'Member.Surname' => 'Last name'
   ];
+  
+  private static $searchable_fields = [
+    'ID'
+  ];
+  
+  public function getCustomSearchContext() {
+        $fields = $this->scaffoldSearchFields([
+            'restrictFields' => ['ID']
+        ]);
+
+        // $filters = [
+        //     'PublicProperty' => new PartialMatchFilter('PublicProperty'),
+        //     'MyDate' => new GreaterThanFilter('MyDate')
+        // ];
+
+        return new SearchContext(
+            $this->class,
+            $fields
+            // $filters
+        );
+    }
 
 }

@@ -1,6 +1,11 @@
 <?php
 
 use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\Forms\Form;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\FormAction;
+
+use TeamTrack\Profile;
 
 class PageController extends ContentController
 {
@@ -19,7 +24,7 @@ class PageController extends ContentController
      *
      * @var array
      */
-    private static $allowed_actions = [];
+    private static $allowed_actions = ['SearchForm'];
 
     protected function init()
     {
@@ -27,4 +32,30 @@ class PageController extends ContentController
         // You can include any CSS or JS required by your project here.
         // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
     }
+    
+    public function SearchForm() 
+    {
+        $context = singleton(Profile::class)->getCustomSearchContext();
+        $fields = $context->getSearchFields();
+
+        $form = new Form($this, "SearchForm",
+            $fields,
+            new FieldList(
+                new FormAction('doSearch')
+            )
+        );
+
+        return $form;
+    }
+
+    public function doSearch($data, $form) 
+    {
+        $context = singleton(Profile::class)->getCustomSearchContext();
+        $results = $context->getResults($data);
+
+        return $this->customise([
+            'Results' => $results
+        ])->renderWith('Page_results');
+    }
+    
 }

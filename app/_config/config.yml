@@ -5,3 +5,7 @@ After: "*"
 SilverStripe\Security\Member:
   extensions:
     - TeamTrack\Extensions\MemberExtension
+    
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Security\MemberAuthenticator\MemberLoginForm:
+    class: TeamTrack\Extensions\MemberLoginFormExtension
