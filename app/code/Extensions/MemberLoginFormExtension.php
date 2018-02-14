@@ -2,10 +2,10 @@
 
 namespace TeamTrack\Extensions;
 
-use SilverStripe\Security\MemberAuthenticator\MemberLoginForm;
-use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Security\Member;
 use SilverStripe\Control\Controller;
+use SilverStripe\Core\Injector\Injector;
+use SilverStripe\Security\MemberAuthenticator\MemberLoginForm;
 
 class MemberLoginFormExtension extends MemberLoginForm {
 

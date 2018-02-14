@@ -11,5 +11,10 @@
 			<% end_loop %>
     </ul>
   </div>
-  <a href="/Security/login">LOGIN</a>
+  <% if $currMember %>
+    <a href="/Security/logout">LOGOUT</a>
+  <% else %>
+    <a href="/Security/login">LOGIN</a>
+    
+  <% end_if %>
 </nav>

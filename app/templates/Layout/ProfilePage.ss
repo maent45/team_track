@@ -1,3 +1,4 @@
-<% loop $member %>
-  $Email
-<% end_loop %>
+<% if $currMember %>
+  $currMember.FirstName
+  $currMember.Email
+<% end_if %>
